@@ -28,7 +28,14 @@ dropdown.onchange = function() {
 };
 
 //question 4
+const textarea = document.querySelector(".input");
+const characterCount = document.querySelector(".char-count b");
 
+textarea.onkeyup = function () {
+    const length = event.target.value.length;
+
+    characterCount.innerHTML = length;
+};
 
 
 
