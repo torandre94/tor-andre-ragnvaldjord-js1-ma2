@@ -27,7 +27,7 @@ dropdown.onchange = function() {
     }
 };
 
-//question 4
+// question 4
 const textarea = document.querySelector(".input");
 const characterCount = document.querySelector(".char-count b");
 
@@ -37,5 +37,19 @@ textarea.onkeyup = function () {
     characterCount.innerHTML = length;
 };
 
+// question 5
+const body = document.querySelector("body");
 
+function handleScroll () {
+    const scrolledY = window.scrollY;
 
+    if (scrolledY > 35) {
+        body.classList.add("body.highlight");
+
+    }
+    else {
+        body.classList.remove("body.highlight");
+    }
+}
+
+window.onscroll = handleScroll;
